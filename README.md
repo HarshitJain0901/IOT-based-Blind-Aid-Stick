@@ -1,56 +1,61 @@
-IoT-Based Blind Aid Stick
-The IoT-Based Blind Aid Stick is a smart assistive device designed to help visually impaired individuals navigate their surroundings safely. It detects obstacles and wet surfaces using sensors and provides real-time feedback via a buzzer and a connected Blynk IoT application.
+# 🦯 IoT-Based Blind Aid Stick
 
-📌 Features
-Obstacle Detection: Detects objects using the HC-SR04 ultrasonic sensor.
+![IoT](https://img.shields.io/badge/IoT-Project-blue)
+![Blynk](https://img.shields.io/badge/Blynk-ESP8266-green)
+![C++](https://img.shields.io/badge/Language-C%2B%2B-orange)
+![Arduino IDE](https://img.shields.io/badge/IDE-Arduino-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-Wet Surface Detection: Uses a Soil Moisture Sensor to detect wet/slippery surfaces.
+The **IoT-Based Blind Aid Stick** is a smart assistive device designed to help visually impaired individuals navigate safely.  
+It uses **ultrasonic sensors** to detect obstacles, **moisture sensors** to detect wet surfaces, and **IoT integration (Blynk)** for remote monitoring and buzzer control.
 
-Remote Buzzer Activation: Can locate the stick using a Blynk-controlled buzzer.
+---
 
-IoT Monitoring: Displays distance and moisture readings in real-time on the Blynk App.
+## 📌 Features
 
-Portable Design: Lightweight, made using a PVC pipe armature.
+- 🔹 **Obstacle Detection:** Alerts user if objects are within 60 cm.  
+- 🔹 **Wet Surface Detection:** Warns user about wet or slippery surfaces.  
+- 🔹 **IoT Remote Control:** Locate the stick with a Blynk-controlled buzzer.  
+- 🔹 **Portable Design:** Lightweight PVC-based construction.  
 
-🛠 Components Used
-Component	Quantity	Description
-NodeMCU (ESP8266)	1	Microcontroller with Wi-Fi
-HC-SR04 Ultrasonic Sensor	1	Detects obstacles by measuring distance
-Soil Moisture Sensor	1	Detects wet/slippery surfaces
-IR Remote + Receiver	1	For wireless buzzer activation
-Passive & Active Buzzers	2	Provides audio alerts
-Breadboard	1	For circuit assembly
-Jumper Wires (M-F / M-M / F-F)	-	For connections
-9V Battery	1	Power supply
-PVC Pipe	1	Stick body
+---
 
-⚡ Circuit Diagram
-<img width="719" height="473" alt="image" src="https://github.com/user-attachments/assets/f10b1148-2d87-41b8-b2fc-c2a524ad74c9" />
+## 🛠 Components Used
 
+| Component | Description |
+|----------|-------------|
+| **NodeMCU (ESP8266)** | Microcontroller with Wi-Fi |
+| **HC-SR04 Ultrasonic Sensor** | Measures distance to detect obstacles |
+| **Soil Moisture Sensor** | Detects wet/slippery surfaces |
+| **IR Remote + Receiver** | Controls the buzzer wirelessly |
+| **Active & Passive Buzzers** | Provides audio alerts |
+| **Breadboard & Jumper Wires** | For prototyping connections |
+| **9V Battery** | Power supply |
+| **PVC Pipe** | Stick armature |
 
-💻 Implementation
-The system works in three main steps:
+---
 
-Distance Measurement:
-The ultrasonic sensor calculates the distance to nearby objects.
+## ⚡ Circuit Diagram
 
-Surface Moisture Detection:
-The soil moisture sensor detects wet or slippery surfaces.
+Here’s the **breadboard circuit diagram**:
 
-Alert Mechanism:
+![Circuit Diagram](./circuit_diagram.png)
 
-If an obstacle is closer than 60 cm, the buzzer is triggered.
+---
 
-If moisture is detected below a threshold, the buzzer alerts the user.
+## 🏗 Prototype
 
-Remote buzzer control via Blynk App helps locate the stick.
+Real working model of the Blind Aid Stick:
 
-📜 Code
-The code is implemented using Arduino IDE with ESP8266 and Blynk libraries.
+![Prototype](./prototype_image.png)
 
-cpp
-Copy
-Edit
+---
+
+## 💻 Code
+
+Implemented using **Arduino IDE** with **ESP8266 and Blynk libraries**.
+
+```cpp
 #define BLYNK_TEMPLATE_ID "TMPL3FLr3e-l9"
 #define BLYNK_TEMPLATE_NAME "Blind Aid Stick"
 #define BLYNK_AUTH_TOKEN "Your_Blynk_Token"
@@ -113,19 +118,3 @@ void loop() {
 
   delay(200);
 }
-📱 IoT Dashboard
-The project uses Blynk IoT for:
-
-Distance & Moisture Monitoring
-
-Remote Buzzer Control
-
-Real-time Notifications
-
-
-✅ Future Improvements
-Integrate GPS tracking to locate the stick if lost.
-
-Add vibration motor for silent feedback.
-
-Enhance battery efficiency with low-power modes.

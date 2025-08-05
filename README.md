@@ -39,7 +39,10 @@ It uses **ultrasonic sensors** to detect obstacles, **moisture sensors** to dete
 
 Here’s the **breadboard circuit diagram**:
 
-![Circuit Diagram](./circuit_diagram.png)
+![Circuit Diagram]
+
+<img width="719" height="473" alt="image" src="https://github.com/user-attachments/assets/0a7f6def-9be9-44d1-b2c7-4ce356f0aaaf" />
+
 
 ---
 
@@ -47,7 +50,10 @@ Here’s the **breadboard circuit diagram**:
 
 Real working model of the Blind Aid Stick:
 
-![Prototype](./prototype_image.png)
+![Prototype]
+
+<img width="686" height="399" alt="image" src="https://github.com/user-attachments/assets/60253e81-832b-4b04-9400-d220db9cb3b8" />
+
 
 ---
 
